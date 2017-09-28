@@ -1,3 +1,4 @@
+<!--Footer-->
 <footer id="footer" class="footer">
     <div class="container">
 
@@ -28,3 +29,5 @@
 <script src="assets/js/modernizr.js"></script>
 
 <script src="assets/js/main.js"></script>
+</body>
+</html>

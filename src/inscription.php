@@ -3,10 +3,9 @@
     <div class="section">
       <div class="row">
         <div class="col md-12">
-          <?php include('register.php');?>
+          <?php include('connexion.php');?>
         </div>
       </div>
-
     </div>
   </div>
 
