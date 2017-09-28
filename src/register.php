@@ -55,7 +55,6 @@ if(empty($errors)){
     };
     }
 }
-var_dump($res);
 ?>
 
 <h1>S'inscrire</h1>

@@ -11,11 +11,10 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-	<a-scene>
-
-
-					<a-entity position="0 0 4">
-      	<a-camera></a-camera>
-      </a-entity>
+	<a-scene embedded arjs='trackingMethod: best;'>
+      <a-anchor hit-testing-enabled='true'>
+   		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+      </a-anchor>
+		<a-camera-static/>
 	</a-scene>
 </body>

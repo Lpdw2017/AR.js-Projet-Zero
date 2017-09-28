@@ -20,5 +20,4 @@
 				</div>
 </div>
 <?php
-var_dump($_SESSION['log']);
  require 'footer.php'; ?>
