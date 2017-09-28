@@ -1,6 +1,6 @@
 <?php
-require('inc/db.php');
 require('inc/session.php');
+require('inc/db.php');
 ?>
 <!doctype html>
 <html class="no-js" lang="">

@@ -10,4 +10,6 @@
     </div>
   </div>
 
-  <?php require 'footer.php'; ?>
+  <?php
+var_dump($_SESSION['log']);
+  require 'footer.php'; ?>

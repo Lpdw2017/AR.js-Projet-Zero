@@ -1,7 +1,5 @@
 <?php
-require_once 'inc/functions.php';
-require 'inc/session.php';
-require_once 'inc/db.php';
+session_start();
 if(isset($_SESSION['log'])){
     header('Location: index.php');
     exit();
@@ -20,14 +18,17 @@ if(isset($_POST['pseudo']) AND isset($_POST['motdepasse'])){
         if(($res) != 0){
             if(($motdepasse == $donnees->motdepasse)){
              $id = $donnees->id;
+             $admin = $donnees->admin;
+
                     /* Création des sessions */
                     $_SESSION['log'] = array(
                         'id' => $id,
                         'pseudo' => $pseudo,
                         'motdepasse' => $motdepasse,
-
+                        'admin' => $admin
                     );
                      echo 'Connecté !';
+                     var_dump($_SESSION['log']);
             }
             else{
                 echo '<p class="erreur2">Le mot de passe est incorrecte</p>';
@@ -48,7 +49,6 @@ if(isset($_POST['pseudo']) AND isset($_POST['motdepasse'])){
     }
 
 }
-var_dump($_SESSION['log']);
 ?>
 
     <h1>Se connecter</h1>
