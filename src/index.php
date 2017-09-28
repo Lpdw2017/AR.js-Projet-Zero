@@ -39,9 +39,9 @@
 						<h1>La Réalité Augmentée débarque dans ta fac !</h1>
 				</div>
 						<p class="flotte"><img src="assets/images/new.png" alt="" />
-				
+
 			</div>
-			
+
 
         </header>
 
@@ -50,27 +50,27 @@
             <div class="container">
                 <!-- Example row of columns -->
 				<div class="heading-content text-center">
-					
+
 					<h3>Projet 0</h3>
 					<p>Voici une description de notre projet : </br>
-					Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat 
-					imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum 
-					oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe 
-					discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos 
+					Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat
+					imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum
+					oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe
+					discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos
 					ex isdem foveis cerneret emergentes
-					</P>					
+					</P>
 					<img src="assets/images/separator.png" alt="Separator" />
 						<div >
-							<a href="camera.html"><img src="assets/images/logo.png" />
+							<a href="camera.php"><img src="assets/images/logo.png" />
 						</div>
 				</div>
-
+</div>
         <!--Footer-->
         <footer id="footer" class="footer">
-          
-            	
-            		
-            				
+            <div class="container">
+
+
+
 
 								<div class="social">
 									<a href="#"><i class="fa fa-facebook"></i></a>
@@ -79,10 +79,10 @@
 									<a href="#"><i class="fa fa-pinterest-p"></i></a>
 								</div>
 
-							
-            
-           
-			</div>			
+
+
+
+			</div>
         </footer>
 
 
