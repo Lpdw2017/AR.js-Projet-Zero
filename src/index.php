@@ -15,9 +15,10 @@
 					</P>
 					<img src="assets/images/separator.png" alt="Separator" />
 						<div >
-							<a href="camera.php"><img src="assets/images/logo.png" />
+							<a href="camera.php"><img src="images.jpeg" />
 						</div>
 				</div>
 </div>
 <?php
+var_dump($_SESSION['log']);
  require 'footer.php'; ?>
