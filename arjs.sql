@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  mer. 27 sep. 2017 à 11:22
+-- Généré le :  ven. 29 sep. 2017 à 12:03
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.6
 
@@ -17,6 +17,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `ENIGME`
+--
+
+CREATE TABLE `ENIGME` (
+  `id` int(11) NOT NULL,
+  `texte` text NOT NULL,
+  `lieu` text NOT NULL,
+  `reponse` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ENIGME MEMBRE`
+--
+
+CREATE TABLE `ENIGME MEMBRE` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_Enigme` int(11) NOT NULL,
+  `Résolution` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `user`
 --
 
@@ -25,19 +51,26 @@ CREATE TABLE `user` (
   `pseudo` varchar(10) NOT NULL,
   `email` varchar(10) NOT NULL,
   `motdepasse` varchar(10) NOT NULL,
-  `Admin` tinyint(1) NOT NULL
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `user`
---
-
-INSERT INTO `user` (`id`, `pseudo`, `email`, `motdepasse`, `Admin`) VALUES
-(1, 'aze', 'aze@gmail.', 'azerty', 0);
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `ENIGME`
+--
+ALTER TABLE `ENIGME`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `ENIGME MEMBRE`
+--
+ALTER TABLE `ENIGME MEMBRE`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user_user` (`id_user`),
+  ADD KEY `id_enigme_enigme` (`id_Enigme`);
 
 --
 -- Index pour la table `user`
@@ -50,7 +83,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT pour la table `ENIGME MEMBRE`
+--
+ALTER TABLE `ENIGME MEMBRE`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `ENIGME MEMBRE`
+--
+ALTER TABLE `ENIGME MEMBRE`
+  ADD CONSTRAINT `id_enigme_enigme` FOREIGN KEY (`id_Enigme`) REFERENCES `ENIGME` (`id`),
+  ADD CONSTRAINT `id_user_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
