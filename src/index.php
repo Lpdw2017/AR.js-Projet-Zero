@@ -1,9 +1,15 @@
-<?php require 'header.php'; ?>
+<?php require 'header.php';
+$lol = 'trololo';?>
+
         <!-- Sections -->
         <section id="about" class="about sections">
             <div class="container">
                 <!-- Example row of columns -->
 				<div class="heading-content text-center">
+          <script >
+          var lol = '<?php echo $lol; ?>' ;
+          console.log(lol);
+          </script>
 
 					<h3>Projet 0</h3>
 					<p>Voici une description de notre projet : </br>
