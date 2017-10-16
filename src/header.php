@@ -20,6 +20,17 @@ require('inc/db.php');
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+
+
+          <ul id="menu_horizontal">
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="inscription.php">Inscription</a></li>
+          <li><a href="connexion.php">Connexion</a></li>
+
+          </ul>
+
     </head>
+
+
 
 <body>
