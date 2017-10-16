@@ -13,8 +13,6 @@ require('inc/db.php');
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
-        <!--For Plugins external css-->
         <!--Theme custom css -->
         <link rel="stylesheet" href="assets/css/style.css">
         <!--Theme Responsive css-->
