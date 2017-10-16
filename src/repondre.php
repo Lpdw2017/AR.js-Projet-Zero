@@ -6,8 +6,7 @@ $sql="SELECT * FROM ENIGME";
               ?>
 <div class="list_questions">
 	<?php
-              foreach($result as $key => $value){
-var_dump($_SESSION['log']['id']);
+              foreach($result as $key => $value){var_dump($value);
               	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
                       <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
