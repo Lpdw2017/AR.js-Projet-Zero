@@ -13,7 +13,12 @@ body {
   margin-bottom:15%;
   font-size: 25px;
 }
-
+.heading-content h1{
+  color:#AA9585;
+  font-family: fantasy;
+  font-weight: 900;
+  transform: translateY(0px);
+}
 /*For Footer Section*/
 .footer{
 
@@ -45,7 +50,16 @@ padding-top: 10%;
 margin:0;/* espacement horizontal entre les blocs */
 margin-bottom:15%;
 width:48%;
-color:#0A0A0A;
+color:#FDFDFD;
+font-family: fantasy;
 display:inline-block;
 vertical-align:middle;
-text-align:center; /* on rÃ©tablit l'alignement du texte */ }
+text-align:center; /* on rÃ©tablit l'alignement du texte */
+}
+.bloc p {
+  font-weight:400;
+}
+.bloc h3{
+  font-weight:100;
+  font-size:40px;
+}
