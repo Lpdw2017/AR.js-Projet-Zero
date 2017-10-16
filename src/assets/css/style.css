@@ -1,81 +1,30 @@
 html,
 body {
-    
+  background-color: rgb(10, 10, 10);
+  font-family: Karla,Apercu,sans-serif;
+  font-weight: 400;
 
-    background-image: radial-gradient(circle at center, green, black);
 
-    font-size: 14px;
-    color: #666666;
-    width: 100%;
-    font-family: 'pt_sansregular';
-    font-weight: normal;
 }
-/*For Our Global CSS*/
 
-.heading-content {
-	margin-bottom:30px;
-}
-.heading-content h3{
-	text-transform:uppercase;
-	font-family: 'oswaldbold';
-	color:#000;
-}
-.heading-content img{
-	margin:30px 0;
-}
 .heading-content p{
-	width:70%;
-	margin:0 auto;
-	font-family: 'pt_sansitalic';
-	color:000000;
-}
-/* For Menu Bar Design */
-
-.home-wrapper h1{
-    text-transform:uppercase;
-	font-size:54px;
-	font-family: 'oswaldlight';
-	letter-spacing: 1px;
-    line-height: 65px;
-	margin-bottom:15px;
-	color:#000;
-	padding-top: 80px;
 	width:80%;
-	background:#fbf0dc;
-}
-.flotte {
-	float:right;
-}
-
-/*Section*/
-.sections {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-    overflow: hidden;
+	margin:0 auto;
+  margin-bottom:15%;
+  font-size: 25px;
 }
 
-.sections.footer {
-    padding-bottom: 20px;
-}
-/*Separator*/
-.separateur {
-    height: 1px;
-    width: 150px;
-    margin: 3%;
-    background: #f56363;
-}
 /*For Footer Section*/
 .footer{
-	background:#292929;
-	color:#707070;
+
+	color:#FFFFFF;
 	padding: 7px 10px 0;
 	text-align: center;
 }
 .social a i{
-	color: #292929;
+	color: #FFFFFF;
     font-size: 18px;
-    background: #707070;
+    background: #FFFFFF;
     border-radius: 100%;
     height:30px;
     width: 30px;
@@ -84,26 +33,19 @@ body {
     margin: 10px;
 }
 .social a i:hover{
-	color:#fff;
-	background-color: #626262;
-}
-.header{ 
-height:8%; 
-background:#000000; 
+	color:#FFFFFF;
+	background-color: #FFFFFF;
 }
 
 
-div.conteneur { 
 
-width:100%;
-
-text-align:center; }
-
-div.bloc { 
+div.bloc {
 padding:10px; /* aÃ©ration interne des blocs */
+padding-top: 10%;
 margin:0;/* espacement horizontal entre les blocs */
+margin-bottom:15%;
 width:48%;
-color:000000;
+color:#0A0A0A;
 display:inline-block;
 vertical-align:middle;
 text-align:center; /* on rÃ©tablit l'alignement du texte */ }
