@@ -11,15 +11,19 @@ if(isset($_SESSION['log'])){
     <div class="admin">
     	<?php
                   foreach($result as $key => $value){
-                    ?> <div class="user"> <?php echo $value['pseudo']; ?>
-                      <?php echo "<button class='delet' type='button' href='admin/delete.php?id='.$key.'> Supprimer l'utilisateur </button>"?>
-                      <?php echo "<button class='modif' type='button' href='admin/modification.php?id='.$key.'> modifier l'utilisateur  </button>"?>
+                    ?> <div class="user"> <?php echo $value['pseudo'];?>
+                      <?php echo ("<a class='delet' type='button' href='admin/delete.php?id=".$value['id']."'> Supprimer l'utilisateur </a>");?>
+                      <?php echo ("<a class='modif' type='button' href='admin/modification.php?id=".$value['id']."'> modifier l'utilisateur  </a>");?>
                     <?php
                   }
                   ?>
-
       </div>
       <?php
   }
+} else {
+  ?>
+  <h2>Vous n'avez rien à faire ici, retournez d'ou vous venez !<a href="index.php">fripouille  !</a> </h2>
+  <?php
 }
+
 require 'footer.php' ?>

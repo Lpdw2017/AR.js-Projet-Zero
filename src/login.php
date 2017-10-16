@@ -1,53 +1,54 @@
 <?php
-session_start();
 if(isset($_SESSION['log'])){
-    header('Location: index.php');
-    exit();
+?>
+<div class="Alerte connexion"> Vous êtes déjà connecté, Impossible de vous connecté deux fois <?php echo($_SESSION['log']['pseudo']) ?>
+<?php
 }
-if(isset($_POST['pseudo']) AND isset($_POST['motdepasse'])){
+else {
 
-    if(!empty($_POST['pseudo']) AND !empty($_POST['motdepasse'])){
+  if(isset($_POST['pseudo']) AND isset($_POST['motdepasse'])){
 
-        $pseudo = $_POST['pseudo'];
-        $motdepasse = $_POST['motdepasse'];
-        $req = $db->prepare('SELECT * FROM user WHERE (pseudo = :pseudo OR email = :pseudo)');
-        $req->execute(['pseudo' => $_POST['pseudo']]);
-        $req->setFetchMode(PDO::FETCH_OBJ);
-        $donnees = $req->fetch();
-        $res = $req->rowCount();
-        if(($res) != 0){
-            if(($motdepasse == $donnees->motdepasse)){
-             $id = $donnees->id;
-             $admin = $donnees->admin;
+      if(!empty($_POST['pseudo']) AND !empty($_POST['motdepasse'])){
 
-                    /* Création des sessions */
-                    $_SESSION['log'] = array(
-                        'id' => $id,
-                        'pseudo' => $pseudo,
-                        'motdepasse' => $motdepasse,
-                        'admin' => $admin
-                    );
-                     echo 'Connecté !';
-                     var_dump($_SESSION['log']);
-            }
-            else{
-                echo '<p class="erreur2">Le mot de passe est incorrecte</p>';
-            }
+          $pseudo = $_POST['pseudo'];
+          $motdepasse = $_POST['motdepasse'];
+          $req = $db->prepare('SELECT * FROM user WHERE (pseudo = :pseudo OR email = :pseudo)');
+          $req->execute(['pseudo' => $_POST['pseudo']]);
+          $req->setFetchMode(PDO::FETCH_OBJ);
+          $donnees = $req->fetch();
+          $res = $req->rowCount();
+          if(($res) != 0){
+              if(($motdepasse == $donnees->motdepasse)){
+               $id = $donnees->id;
+               $admin = $donnees->admin;
 
-        }
-        else{
+                      /* Création des sessions */
+                      $_SESSION['log'] = array(
+                          'id' => $id,
+                          'pseudo' => $pseudo,
+                          'motdepasse' => $motdepasse,
+                          'admin' => $admin
+                      );
+                       echo ($_SESSION['log']['pseudo'].", vous êtes connecté  ! vous pouvez dorénavant revenir à la page d'index. <a href='index.php'>Revenir à la page principale</a>");
+              }
+              else{
+                  echo '<p class="erreur2">Le mot de passe est incorrecte</p>';
+              }
+          }
+          else{
 
-            echo '<p class="erreur2">Ce pseudo n\'existe pas</p>';
+              echo '<p class="erreur2">Ce pseudo n\'existe pas</p>';
 
-        }
+          }
 
-    }
-    else{
+      }
+      else{
 
-        echo '<p class="erreur2">Veuillez remplir tous les champs</p>';
+          echo '<p class="erreur2">Veuillez remplir tous les champs</p>';
 
-    }
+      }
 
+  }
 }
 ?>
 
@@ -61,14 +62,8 @@ if(isset($_POST['pseudo']) AND isset($_POST['motdepasse'])){
         </div>
 
         <div class="form-group">
-            <label for="">Mot de passe <a href="forget.php">(J'ai oublié mon mot de passe)</a></label>
+            <label for="">Mot de passe</label>
             <input type="password" name="motdepasse" class="form-control"/>
-        </div>
-
-        <div class="form-group">
-            <label>
-                <input type="checkbox" name="remember" value="1"/> Se souvenir de moi
-            </label>
         </div>
 <br>
         <button type="submit" class="btn btn-primary">Se connecter</button>

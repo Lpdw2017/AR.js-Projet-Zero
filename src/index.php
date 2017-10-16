@@ -1,5 +1,21 @@
 <?php require 'header.php';
-$lol = 'trololo';?>
+$lol = 'trololo';
+
+if(isset($_SESSION['log'])){
+?>
+<div class="message_connexion">
+  <p>Bienvenu <?php echo($_SESSION['log']['pseudo']);?></p>
+  <p>Profite bien de ton voyage ici...</p>
+</div>
+<?php
+if($_SESSION['log']['admin'] = 1){
+  ?>
+  <div class="admin_panneau">
+    <p>Vous êtes un administrateur, vous pouvez vous connectés ici !
+    <a href="admin.php">admin</a>'
+<?php
+}
+} ?>
 
         <!-- Sections -->
         <section id="about" class="about sections">
@@ -26,5 +42,5 @@ $lol = 'trololo';?>
 				</div>
 </div>
 <?php
-var_dump($_SESSION['log']);
+
  require 'footer.php'; ?>

@@ -1,7 +1,9 @@
 <?php
 require('inc/session.php');
 require('inc/db.php');
+
 $lol = 'trololo';
+if(isset($_SESSION['log'])){
 ?>
 
 <head>
@@ -13,9 +15,7 @@ $lol = 'trololo';
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
 </head>
-
 
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='trackingMethod: best;'>
@@ -28,3 +28,8 @@ $lol = 'trololo';
 	</a-scene>
 
 </body>
+<?
+}else{
+	header('Location: index.php');
+	exit();
+}

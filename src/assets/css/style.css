@@ -1,6 +1,9 @@
 html,
 body {
-    background-color: #ffffff;
+    
+
+    background-image: radial-gradient(circle at center, green, black);
+
     font-size: 14px;
     color: #666666;
     width: 100%;
@@ -24,25 +27,10 @@ body {
 	width:70%;
 	margin:0 auto;
 	font-family: 'pt_sansitalic';
+	color:000000;
 }
 /* For Menu Bar Design */
-.cd-header {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-	background:#292929;
-}
-.cd-header {
-        height: 80px;
-    }
-/*For Home Page Style*/
 
-.home{
-	background:#fbf0dc;
-	padding-top:80px;
-}
 .home-wrapper h1{
     text-transform:uppercase;
 	font-size:54px;
@@ -51,8 +39,9 @@ body {
     line-height: 65px;
 	margin-bottom:15px;
 	color:#000;
-	padding-top: 10px;
+	padding-top: 80px;
 	width:80%;
+	background:#fbf0dc;
 }
 .flotte {
 	float:right;
@@ -70,10 +59,10 @@ body {
     padding-bottom: 20px;
 }
 /*Separator*/
-.separator {
+.separateur {
     height: 1px;
     width: 150px;
-    margin: auto;
+    margin: 3%;
     background: #f56363;
 }
 /*For Footer Section*/
@@ -98,3 +87,23 @@ body {
 	color:#fff;
 	background-color: #626262;
 }
+.header{ 
+height:8%; 
+background:#000000; 
+}
+
+
+div.conteneur { 
+
+width:100%;
+
+text-align:center; }
+
+div.bloc { 
+padding:10px; /* aÃ©ration interne des blocs */
+margin:0;/* espacement horizontal entre les blocs */
+width:48%;
+color:000000;
+display:inline-block;
+vertical-align:middle;
+text-align:center; /* on rÃ©tablit l'alignement du texte */ }
