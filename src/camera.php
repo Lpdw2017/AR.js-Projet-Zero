@@ -1,7 +1,7 @@
 <?php
 require('inc/session.php');
 require('inc/db.php');
-$finalite = "lol";
+$finalite = "qu'est ce qui est jaune et qui attend ?";
 $sql="SELECT * FROM ENIGME";
               $req = $db->prepare($sql);
               $req->execute();

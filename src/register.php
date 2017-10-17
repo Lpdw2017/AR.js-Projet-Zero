@@ -45,7 +45,7 @@ if(empty($errors)){
             <p>
               Vous voila inscrit !
             </p>
-            <a href="index.php">maintenant, connectez vous !</a>
+            <a href="connexion.php">maintenant, connectez vous !</a>
             <?php
 
             $req->closeCursor();
