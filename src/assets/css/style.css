@@ -72,3 +72,10 @@ text-align:center; /* on rÃ©tablit l'alignement du texte */
 	color:#FFFFFF;
 	background-color: #FFFFFF;
 }
+ul#menu_horizontal li {
+display : inline;
+padding : 0 0.5em;
+}
+ul#menu_horizontal {
+list-style-type : none;
+}
