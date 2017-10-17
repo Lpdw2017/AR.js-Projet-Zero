@@ -1,8 +1,9 @@
 <?php
 if(isset($_SESSION['log'])){
 ?>
-<div class="Alerte connexion"> Vous êtes déjà connecté, Impossible de vous connecté deux fois <?php echo($_SESSION['log']['pseudo']) ?>
-<?php
+<div class="Alerte connexion">
+  <div class="alert alert-danger" role="alert">Vous êtes déjà connecté, Impossible de vous connecté deux fois <?php echo($_SESSION['log']['pseudo']) ?>
+</div> <?php
 }
 else {
 
@@ -32,7 +33,7 @@ else {
                        echo ($_SESSION['log']['pseudo'].", vous êtes connecté  ! vous pouvez dorénavant revenir à la page d'index. <a href='index.php'>Revenir à la page principale</a>");
               }
               else{
-                  echo '<p class="erreur2">Le mot de passe est incorrecte</p>';
+                  echo '<div class="alert alert-danger" role="alert"> <p class="erreur2">Le mot de passe est incorrecte</p></div>';
               }
           }
           else{

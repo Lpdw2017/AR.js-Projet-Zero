@@ -1,7 +1,7 @@
 <?php
 require('inc/session.php');
 require('inc/db.php');
-$finalite = "lol";
+$finalite = "lol\ huihui";
 $sql="SELECT * FROM ENIGME";
               $req = $db->prepare($sql);
               $req->execute();

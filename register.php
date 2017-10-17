@@ -45,7 +45,9 @@ if(empty($errors)){
             <p>
               Vous voila inscrit !
             </p>
-            <a href="connexion.php">maintenant, connectez vous !</a>
+
+            
+            <a href="index.php">maintenant, connectez vous !</a>
             <?php
 
             $req->closeCursor();
@@ -64,7 +66,8 @@ if(empty($errors)){
     <p>Vous n'avez pas rempli le formulaire correctement</p>
     <ul>
         <?php foreach($errors as $error): ?>
-           <li><?= $error; ?></li>
+
+<div class="alert alert-success" role="alert"><li><?= $error; ?></li></div>
         <?php endforeach; ?>
     </ul>
 </div>
