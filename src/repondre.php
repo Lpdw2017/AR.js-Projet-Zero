@@ -8,8 +8,19 @@ $sql="SELECT * FROM ENIGME";
 	<?php
               foreach($result as $key => $value){var_dump($value);
               	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
-                      <input type="repondre" name="repondre" class="form_input"/>
+                    <? if($value['Resolution'] = 0){
+                    ?>
+                    <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
+                    <?
+                  }else {
+                    ?>
+                    <p>vous avez déjà répondu à la question !</p>
+                    <?
+                  }
+                    ?>
+                    <button id ="indice_lieu">Un indice sur le lieu? </button>
+                    <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>
                 <?php
                   if(!empty($_POST)){
@@ -31,9 +42,9 @@ $sql="SELECT * FROM ENIGME";
                                           );
                                           ?>
                                           <p>
-                                            Vous voila inscrit !
+                                            Vous avez trouvé la bonne réponse ! Bravo !
                                           </p>
-                                          <a href="connexion.php">maintenant, connectez vous !</a>
+                                          <a href="repondre.php">revenir</a>
                                           <?php
 
                                           $req->closeCursor();
