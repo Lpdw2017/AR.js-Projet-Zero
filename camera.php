@@ -10,8 +10,8 @@ if(isset($_SESSION['log'])){
 ?>
 
 <head>
-	<script src="../aframe.min.js"></script>
-<script src="../ar-js.js"></script>
+	<script src="aframe.min.js"></script>
+<script src="ar-js.js"></script>
 <meta charset="utf-8">
 <title>Realite augmentee</title>
 </head>
