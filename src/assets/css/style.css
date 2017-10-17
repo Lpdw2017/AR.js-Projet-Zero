@@ -11,9 +11,16 @@ h1{
   font-weight: 900;
   transform: translateY(0px);
 }
-p{
+body{
+  color: #FDFDFD;
+}
+label{
   color: #FDFDFD;
   font-family: fantasy;
+}
+#indice_lieu{
+  color: black;
+
 }
 .panneau_index{
 display: flex;
