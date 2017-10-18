@@ -15,8 +15,7 @@ require('inc/db.php');
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!--Theme custom css -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <!--Theme Responsive css-->
-        <link rel="stylesheet" href="assets/css/responsive.css" />
+
 </head>
 
 

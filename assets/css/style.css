@@ -79,3 +79,37 @@ padding : 0 0.5em;
 ul#menu_horizontal {
 list-style-type : none;
 }
+
+/* Camera CSS*/
+#markerInfo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.2s;
+  will-change: opacity;
+}
+
+#markerInfo.hidden {
+  opacity: 0;
+}
+
+.marker-img-container {
+  perspective: 600px;
+}
+
+.marker-img-container img {
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+  transform: rotateX(60deg);
+  opacity: 0.5;
+}
