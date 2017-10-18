@@ -2,20 +2,6 @@
 require('inc/session.php');
 require('inc/db.php');
 ?>
-<!--    <div class="col-md-0">
-      <p>Bienvenue compagnon <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
-      <?php
-        if($_SESSION['log']['admin'] = 1){
-      ?>
-      <p>Vous êtes un administrateur compagnon. Rendez vous sur <a href="admin.php"> le panneau d'administration</a> pour user de vos droits. </p>
-      <?php
-        }
-       ?>
-       <?php
-        }
-        ?>
-    </div>
--->
         <?php
           require 'header.php';
         ?>

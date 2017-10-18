@@ -1,9 +1,25 @@
 <?php require 'header.php';
-$sql="SELECT * FROM ENIGME";
+$sql="SELECT* FROM ENIGME";
               $req = $db->prepare($sql);
               $req->execute();
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
               ?>
+  <div class="col-md-0">
+                    <p>Bienvenue compagnon <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
+                    <?php
+                      if($_SESSION['log']['admin'] = 1){
+                    ?>
+                    <p>Vous êtes un administrateur compagnon. Rendez vous sur <a href="admin.php"> le panneau d'administration</a> pour user de vos droits. </p>
+                    <?php
+                      }
+                     ?>
+                     <?php
+                      }
+                      ?>
+</div>
+<div class="jeu">
+  <p></p>
+</div>
 <div class="list_questions">
 	<?php
               foreach($result as $key => $value){var_dump($value);
