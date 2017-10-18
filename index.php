@@ -22,26 +22,14 @@ require('inc/db.php');
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 
     </head>
-<body>
+<body style="background-color:c2c2c2">
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2" style="background-color: #A9A9A9; height:100%;">
-      <p>Bienvenue compagnon <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
-      <?php
-        if($_SESSION['log']['admin'] = 1){
-      ?>
-      <p>Vous êtes un administrateur compagnon. Rendez vous sur <a href="admin.php"> le panneau d'administration</a> pour user de vos droits. </p>
-      <?php
-        }
-       ?>
-       <?php
-        }
-        ?>
-    </div>
 
 
 
-    <div class="col-md-8">
+
+    <div class="col-md-8" style="margin:auto;float:none;background-color:#000;height:100%">
       <div class="row">
         <?php
           require 'header.php';
@@ -58,13 +46,10 @@ require('inc/db.php');
         </div>
 
         <div class="col-md-6">
-      					<h3>Projet 0 :</h3></br></br>
-      					<p>Voici une description de notre projet : </br></br></br>
-      					Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat
-      					imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum
-      					oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe
-      					discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos
-      					ex isdem foveis cerneret emergentes
+      					<h3>The Faclab Quest:</h3></br></br>
+      					<p>Ola voyageur temporel !  </br></br></br>
+                  Prêt à vivre la plus incroyable quête & à accéder ainsi aux portes du très convoité Faclab ?
+                  Alors inscris-toi, connecte-toi & plonge-toi dans un univers encore inexploré ! L’aventure t’attend !
       					</P>
         </div>
       	<div class="col-md-6">
@@ -75,9 +60,6 @@ require('inc/db.php');
     </div>
   </div>
 
-<div class="col-md-2" style="background-color: #A9A9A9;">
-  colonne droite
-</div>
 
 <div class="row">
   <div class="col-md-12">
