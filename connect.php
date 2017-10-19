@@ -5,15 +5,7 @@ $sql="SELECT* FROM ENIGME";
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
               ?>
   <div class="row heading-content">
-                    <p><h1>Bienvenue PSEUDO </h1><?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
-                    <?php
-                      if($_SESSION['log']['admin'] = 1){
-                    ?>
-                    <p>Vous êtes un administrateur compagnon. Rendez vous sur <a href="admin.php"> le panneau d'administration</a> pour user de vos droits. </p>
-                    <?php
-                      }
-                     ?>
-                     <?php
+                    <p><h1>Bienvenue <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?> </h1> <?php
                       }
                       ?>
 </div>
@@ -36,22 +28,33 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
 </div>
 <div class="list_questions">
 	<?php
-              foreach($result as $key => $value){;
-              	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
-                    <? if($value['Resolution'] = 0){
+              foreach($result as $key => $value){?>
+
+              	<h1><?php echo $value['titre']; ?></h1>
+
+
+
+
+                <form action="" method="POST"><label for="">Répondre à la question</label>
+                    <? if($value['Resolution'] != 0){
                     ?>
                     <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
-                    <?
-                  }else {
-                    ?>
+
+
+                    <?}else {?>
+
+
                     <p>vous avez déjà répondu à la question !</p>
-                    <?
-                  }
-                    ?>
+                    <?}?>
+
+
                     <button id ="indice_lieu">Un indice sur le lieu? </button>
                     <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>
+
+
+
                 <?php
                   if(!empty($_POST)){
                                   $errors = array();
@@ -71,20 +74,23 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
                                               )
                                           );
                                           ?>
+
+
+
+
                                           <p>
                                             Vous avez trouvé la bonne réponse ! Bravo !
                                           </p>
                                           <a href="repondre.php">revenir</a>
-                                          <?php
 
-                                          $req->closeCursor();
+
+
+                                          <?php $req->closeCursor();
                                   }
                                   catch (PDOException $e){
                                       echo 'error while inserting enigme :'.$e->getMessage();
-                                  };
-                                  }
-                              }
-              }
+                                  };}
+                              }}
               ?>
               <?php if(!empty($errors)): ?>
               <div class="alert alert-danger">

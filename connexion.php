@@ -2,9 +2,7 @@
 <div class="container">
     <div class="section">
       <div class="row">
-        <div class="col md-12">
-          <?php include('login.php');?>
-        </div>
+        <?php include('login.php');?>
       </div>
     </div>
   </div>
