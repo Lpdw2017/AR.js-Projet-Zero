@@ -19,26 +19,36 @@ $sql="SELECT* FROM ENIGME";
 </div>
 <div="row">
 <div class="col-md-offset-2 col-md-8">
-<p class="text-center">Te voici connecté(e) à l’univers fantastique de The Faclab Quest !</br></br>
+<h2 class="text-center">Te voici connecté(e) à l’univers fantastique de </br>The Faclab Quest !</h2></br></br>
 
-Es-tu prêt à résoudre les énigmes les plus improbables jeune fantassin ?</br>
+<p class="text-center">Es-tu prêt à vivre une quête 2.0 la plus improbable de tous les temps jeune fantassin ?</br>
 
-Alors lance-toi & choisis l’énigme par laquelle tu veux commencer !</br>
+Alors lance-toi & découvre dès à présent ta première énigme !</br>
 
 Il te faudra toutes les résoudre pour donner le mot de passe à l’ogre qui garde l’entrée de la salle tant convoitée !</br>
 
 Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le saura !</br>
 
+Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
+
 </div>
-<div class="text-center"><img src="assets/images.jpeg"><div class="jeu">
-  <p></p>
+<div class="text-center"><a href="camera/camera1.php" ><img src="assets/images.jpeg">
 </div>
 <div class="list_questions">
 	<?php
               foreach($result as $key => $value){;
               	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
+                    <? if($value['Resolution'] = 0){
+                    ?>
                     <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
+                    <?
+                  }else {
+                    ?>
+                    <p>vous avez déjà répondu à la question !</p>
+                    <?
+                  }
+                    ?>
                     <button id ="indice_lieu">Un indice sur le lieu? </button>
                     <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>
