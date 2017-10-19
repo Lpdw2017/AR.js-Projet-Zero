@@ -1,11 +1,11 @@
 <?php
 require 'header.php';
 if(isset($_SESSION['log'])){
-
-$sql="SELECT* FROM ENIGME LEFT JOIN enigme_membre ON ENIGME.id = enigme_membre.id_enigme";
+$sql="SELECT * FROM ENIGME INNER JOIN enigme_membre ON ENIGME.id = enigme_membre.id";
               $req = $db->prepare($sql);
               $req->execute();
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
+              var_dump($result);
               ?>
   <div class="row heading-content">
                     <p><h1>Bienvenue <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?> </h1> <?php
@@ -32,8 +32,8 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
 <div class="list_questions">
 	<?php
               foreach($result as $key => $value){?>
-
-              	<h1><?php echo $value['titre']; ?></h1>
+                <?php echo ("<a class='camera' type='button' href='camera/camera.php?id=".$value['id']."'><i class='fa fa-camera-retro' aria-hidden='true'></i></a>");?>
+              	<h1><?php echo $value['titre'];?></h1>
 
 
                 <form action="" method="POST"><label for="">Répondre à la question</label>
@@ -51,8 +51,6 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
                     <button id ="indice_lieu">Un indice sur le lieu? </button>
                     <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>
-
-
 
                 <?php
                   if(!empty($_POST)){
