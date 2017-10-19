@@ -1,5 +1,5 @@
 <?php require 'header.php'; ?>
-<div class="container">
+<div class="cont">
     <div class="section">
       <div class="row">
         <div class="col md-12">

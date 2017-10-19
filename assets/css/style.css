@@ -26,6 +26,9 @@ nav{
 background-color: black;
 font-family: apple chancery,cursive;
 }
+.cont{
+  margin: 2%;
+}
 /* INDEX */
 .heading-content{
   display: flex;
