@@ -4,8 +4,8 @@ $sql="SELECT* FROM ENIGME";
               $req->execute();
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
               ?>
-  <div class="col-md-0">
-                    <p>Bienvenue PSEUDO <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
+  <div class="row heading-content">
+                    <p><h1>Bienvenue PSEUDO </h1><?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
                     <?php
                       if($_SESSION['log']['admin'] = 1){
                     ?>
@@ -17,23 +17,25 @@ $sql="SELECT* FROM ENIGME";
                       }
                       ?>
 </div>
-  <div class="col-md-offset-4 col-md-4">
-    <p class="text-center">Te voici connecté(e) à l’univers fantastique de The Faclab Quest !
+<div="row">
+<div class="col-md-offset-2 col-md-8">
+<p class="text-center">Te voici connecté(e) à l’univers fantastique de The Faclab Quest !</br></br>
 
-Es-tu prêt à résoudre les énigmes les plus improbables jeune fantassin ?
+Es-tu prêt à résoudre les énigmes les plus improbables jeune fantassin ?</br>
 
-Alors lance-toi & choisis l’énigme par laquelle tu veux commencer !
+Alors lance-toi & choisis l’énigme par laquelle tu veux commencer !</br>
 
-Il te faudra toutes les résoudre pour donner le mot de passe à l’ogre qui garde l’entrée de la salle tant convoitée !
+Il te faudra toutes les résoudre pour donner le mot de passe à l’ogre qui garde l’entrée de la salle tant convoitée !</br>
 
-Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le saura !</p>
+Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le saura !</br>
 
-<div class="jeu">
+</div>
+<div class="text-center"><img src="assets/images.jpeg"><div class="jeu">
   <p></p>
 </div>
 <div class="list_questions">
 	<?php
-              foreach($result as $key => $value){var_dump($value);
+              foreach($result as $key => $value){;
               	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
                     <? if($value['Resolution'] = 0){
                     ?>

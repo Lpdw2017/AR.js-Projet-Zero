@@ -17,8 +17,8 @@ $sql="SELECT* FROM ENIGME";
                       }
                       ?>
 </div>
-  <div class="col-md-offset-4 col-md-4">
-    <p class="text-center">Te voici connecté(e) à l’univers fantastique de The Faclab Quest !
+<div class="col-md-offset-2 col-md-8">
+Te voici connecté(e) à l’univers fantastique de The Faclab Quest !
 
 Es-tu prêt à résoudre les énigmes les plus improbables jeune fantassin ?
 
@@ -26,8 +26,8 @@ Alors lance-toi & choisis l’énigme par laquelle tu veux commencer !
 
 Il te faudra toutes les résoudre pour donner le mot de passe à l’ogre qui garde l’entrée de la salle tant convoitée !
 
-Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le saura !</p>
-
+Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le saura !
+</div>
 <div class="jeu">
   <p></p>
 </div>
