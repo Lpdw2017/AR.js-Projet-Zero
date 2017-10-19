@@ -27,7 +27,7 @@ Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le
 Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
 
 </div>
-<div class="text-center"><a href="camera/camera1.php" ><img src="assets/images.jpeg">
+<div class="text-center"><img src="assets/images.jpeg">
 </div>
 <div class="list_questions">
 	<?php

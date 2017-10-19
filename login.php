@@ -30,7 +30,7 @@ else {
                           'motdepasse' => $motdepasse,
                           'admin' => $admin
                       );
-                       echo ($_SESSION['log']['pseudo'].", vous êtes connecté  ! vous pouvez dorénavant revenir à la page d'index. <a href='index.php'>Revenir à la page principale</a>");
+                       echo ($_SESSION['log']['pseudo'].", vous êtes connecté  ! vous pouvez dorénavant acceder a votre grimoire. <a href='connect.php'>Allons y !</a>");
               }
               else{
                   echo '<div class="alert alert-danger" role="alert"> <p class="erreur2">Le mot de passe est incorrecte</p></div>';
@@ -38,7 +38,7 @@ else {
           }
           else{
 
-              echo '<p class="erreur2">Ce pseudo n\'existe pas, <a href="index.php">Connectez-vous!</a></p>';
+              echo '<p class="erreur2">Ce pseudo n\'existe pas, <a href="inscription.php">Inscrivez-vous!</a></p>';
 
           }
 
