@@ -21,7 +21,7 @@ $sql="SELECT* FROM ENIGME";
 <div class="col-md-offset-2 col-md-8">
 <h2 class="text-center">Te voici connecté(e) à l’univers fantastique de </br>The Faclab Quest !</h2></br></br>
 
-<p class="text-center">Es-tu prêt à vivre une quête 2.0 la plus improbable de tous les temps jeune fantassin ?</br>
+<p class="text-center">Es-tu prêt à vivre la quête 2.0 la plus improbable de tous les temps jeune fantassin ?</br>
 
 Alors lance-toi & découvre dès à présent ta première énigme !</br>
 
