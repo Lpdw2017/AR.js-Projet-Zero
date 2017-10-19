@@ -2,7 +2,7 @@
 require 'header.php';
 if(isset($_SESSION['log'])){
 
-$sql="SELECT* FROM ENIGME";
+$sql="SELECT* FROM ENIGME LEFT JOIN enigme_membre ON ENIGME.id = enigme_membre.id_enigme";
               $req = $db->prepare($sql);
               $req->execute();
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
