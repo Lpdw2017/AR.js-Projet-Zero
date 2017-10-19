@@ -1,10 +1,10 @@
 <?php require 'header.php';
-$sql="SELECT* FROM ENIGME";
+$sql="SELECT * FROM ENIGME LEFT JOIN enigme_membre ON ENIGME.id = enigme_membre.id_enigme";
               $req = $db->prepare($sql);
               $req->execute();
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
               ?>
-  <div class="col-md-0">
+<!--  <div class="col-md-0">
                     <p>Bienvenue PSEUDO <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?>, pour connaitre l'avancement de votre quête, rendez vous sur <a href="repondre.php"> le grimoire</a></p>
                     <?php
                       if($_SESSION['log']['admin'] = 1){
@@ -27,15 +27,17 @@ Alors lance-toi & choisis l’énigme par laquelle tu veux commencer !
 Il te faudra toutes les résoudre pour donner le mot de passe à l’ogre qui garde l’entrée de la salle tant convoitée !
 
 Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le saura !</p>
-
+-->
 <div class="jeu">
   <p></p>
 </div>
+
 <div class="list_questions">
 	<?php
-              foreach($result as $key => $value){var_dump($value);
+  var_dump($result);
+              foreach($result as $key => $value){
               	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
-                    <? if($value['Resolution'] = 0){
+                    <? if($value['Resolution'] != 1){
                     ?>
                     <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
