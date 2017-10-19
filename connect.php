@@ -37,17 +37,8 @@ Il est intransigeant, n’essaie pas de le berner en sautant les étapes ! Il le
 	<?php
               foreach($result as $key => $value){;
               	echo $value['titre']; ?> <form action="" method="POST"><label for="">Répondre à la question</label>
-                    <? if($value['Resolution'] = 0){
-                    ?>
                     <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
-                    <?
-                  }else {
-                    ?>
-                    <p>vous avez déjà répondu à la question !</p>
-                    <?
-                  }
-                    ?>
                     <button id ="indice_lieu">Un indice sur le lieu? </button>
                     <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>

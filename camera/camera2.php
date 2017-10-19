@@ -20,7 +20,7 @@ require('../inc/db.php');
 
   <main id="markerInfo">
     <div class="marker-img-container">
-      <img src="marker/marker1/pattern-marker.png" alt="marker">
+      <img src="marker/marker2/pattern-marker.png" alt="marker">
     </div>
     <p>Marker not detected</p>
   </main>
@@ -100,7 +100,7 @@ require('../inc/db.php');
     // init MARKERCONTROLS de camera pour le MARKER
     var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
       type : 'pattern',
-      patternUrl : 'marker/marker1/pattern-marker.patt',
+      patternUrl : 'marker/marker2/pattern-marker.patt',
       changeMatrixMode: 'cameraTransformMatrix'
     })
     scene.visible = false
@@ -113,7 +113,7 @@ require('../inc/db.php');
     });
 
     var loader = new THREE.OBJLoader();
-    loader.load('models/p-logo1.obj', function ( object ) {
+    loader.load('models/p-logo2.obj', function ( object ) {
       object.traverse( function ( child ) {
         if ( child instanceof THREE.Mesh ) {
           child.material = material;
