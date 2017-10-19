@@ -2,16 +2,9 @@
 <?php
 require('../inc/session.php');
 require('../inc/db.php');
-$finalite = "lol";
-$sql="SELECT * FROM ENIGME";
-              $req = $db->prepare($sql);
-              $req->execute();
-              $result = $req->fetchAll(PDO::FETCH_ASSOC);
-if(isset($_SESSION['log'])){
 ?>
 <!doctype html>
 <html lang="fr">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,18 +13,17 @@ if(isset($_SESSION['log'])){
   <script src="lib/three.js/three.min.js"></script>
   <script src="lib/three.js/OBJLoader.js"></script>
   <script src="lib/AR.js/ar.js"></script>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-<!--
+
   <main id="markerInfo">
     <div class="marker-img-container">
-      <img src="marker/pattern-marker.png" alt="marker">
+      <img src="marker/marker1/pattern-marker.png" alt="marker">
     </div>
     <p>Marker not detected</p>
   </main>
--->
   <script>
     // init rendu
     var renderer  = new THREE.WebGLRenderer({
@@ -108,7 +100,7 @@ if(isset($_SESSION['log'])){
     // init MARKERCONTROLS de camera pour le MARKER
     var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
       type : 'pattern',
-      patternUrl : 'marker/pattern-marker.patt',
+      patternUrl : 'marker/marker1/pattern-marker.patt',
       changeMatrixMode: 'cameraTransformMatrix'
     })
     scene.visible = false
@@ -121,7 +113,7 @@ if(isset($_SESSION['log'])){
     });
 
     var loader = new THREE.OBJLoader();
-    loader.load('models/p-logo.obj', function ( object ) {
+    loader.load('models/p-logo1.obj', function ( object ) {
       object.traverse( function ( child ) {
         if ( child instanceof THREE.Mesh ) {
           child.material = material;
@@ -149,13 +141,10 @@ if(isset($_SESSION['log'])){
         onRenderFct()
       })
     });
-  }
   </script>
 </body>
 </html>
 
-<?
-}else{
-	header('Location: index.php');
-	exit();
-}
+<?php
+
+?>
