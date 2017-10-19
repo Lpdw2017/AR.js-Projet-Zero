@@ -6,26 +6,23 @@
   </div>
   <div class="row">
     <div class="col-md-offset-2 col-md-8">
-      <h3>The Faclab Quest</h3></br>
-        <p>Hola voyageur temporel !</br></br></br></p>
-            <p class="text-center">Prêt à vivre la plus incroyable quête & à accéder ainsi aux portes du très convoité Faclab & de son incroyable trésor ?</br>
-
-            Alors inscris-toi, connecte-toi & plonge-toi dans un univers encore inexploré ! </br>
+      <div class="row fab-quest">
+      <h3>The Faclab Quest</h3>
+    </div>
+    <div class="row index-txt">
+        <h4 class= "voyageur">Hola voyageur temporel!</h4>
+            <p>Prêt à vivre la plus incroyable quête & à accéder ainsi aux portes du très convoité Faclab & de son incroyable trésor ?
+            Alors inscris-toi, connecte-toi & plonge-toi dans un univers encore inexploré !
             L’aventure t’attend !</p>
+            <p>Il te faudra d’abord t’équiper:de courage,de cellules grises mais surtout d’un smartphone Android !</p>
+            <p>Chaque indice te mènera à un endroit précis où il te faudra trouver un marqueur de ce type:</p>
 
-          <p class="text-center"> Il te faudra d’abord t’équiper:</br>
-            de courage,</br>
-            de cellules grises</br>
-            mais surtout d’un smartphone Android !</br></br></p>
+            <img class="txt-deux" src="assets/hiro.png">
 
-            <p>Chaque indice te mènera à un endroit précis où il te faudra trouver un marqueur de ce type:</br></br></p>
+            <p class="txt-trois"> Son utilité ? Entre dans la quête & découvre-la !</p>
 
-            <p class="text-center"><img src="hiro.png"><br/></br></br></br>
-
-
-            Son utilité ? Entre dans la quête & découvre-la !</p></br></br></br>
-
-          <div class= "col-md-offset-5"><img src="./PtInterro.gif"></div>
+          <div class="interrogation-point"><img src="assets/PtInterro.gif"></img></div>
+        </div>
     </div>
   </div>
 <?php
