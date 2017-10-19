@@ -1,4 +1,7 @@
-<?php require 'header.php';
+<?php
+require 'header.php';
+if(isset($_SESSION['log'])){
+
 $sql="SELECT* FROM ENIGME";
               $req = $db->prepare($sql);
               $req->execute();
@@ -103,4 +106,10 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
               </div>
               <?php endif; ?>
 </div>
-<?php require 'footer.php'; ?>
+<?php } else {
+  ?>
+  <h3>Vous n'avez rien à faire ici, retournez d'ou vous venez !<a href="index.php">fripouille  !</a> </h3>
+  <?php
+}
+
+require 'footer.php' ?>
