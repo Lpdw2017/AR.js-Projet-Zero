@@ -5,7 +5,6 @@ $sql="SELECT * FROM ENIGME INNER JOIN enigme_membre ON ENIGME.id = enigme_membre
               $req = $db->prepare($sql);
               $req->execute();
               $result = $req->fetchAll(PDO::FETCH_ASSOC);
-              var_dump($result);
               ?>
   <div class="row heading-content">
                     <p><h1>Bienvenue <?php if(isset($_SESSION['log'])){ echo($_SESSION['log']['pseudo']);?> </h1> <?php
@@ -32,22 +31,16 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
 <div class="list_questions">
 	<?php
               foreach($result as $key => $value){?>
-                <?php echo ("<a class='camera' type='button' href='camera/camera.php?id=".$value['id']."'><i class='fa fa-camera-retro' aria-hidden='true'></i></a>");?>
               	<h1><?php echo $value['titre'];?></h1>
-
-
                 <form action="" method="POST"><label for="">Répondre à la question</label>
                     <? if($value['Resolution'] != 1){
                     ?>
                     <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
-
-
                     <?}else {?>
                     <p>vous avez déjà répondu à la question !</p>
                     <?}?>
-
-
+                    <?php echo ("<a class='camera' type='button' href='camera/camera".$value['id'].".php'><i class='fa fa-camera-retro' aria-hidden='true'></i></a>");?>  
                     <button id ="indice_lieu">Un indice sur le lieu? </button>
                     <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>
