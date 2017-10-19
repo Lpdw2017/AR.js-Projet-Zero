@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Client :  localhost:8889
--- Généré le :  Ven 29 Septembre 2017 à 14:11
+-- Hôte : localhost:8889
+-- Généré le :  jeu. 19 oct. 2017 à 16:27
 -- Version du serveur :  5.6.35
--- Version de PHP :  7.1.1
+-- Version de PHP :  7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -29,11 +29,15 @@ CREATE TABLE `ENIGME` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `ENIGME`
+-- Déchargement des données de la table `ENIGME`
 --
 
 INSERT INTO `ENIGME` (`id`, `titre`, `texte`, `lieu`, `reponse`) VALUES
-(3, 'Enigme n1', 'qu\'est ce qui est petit et marron?', 'a côte des toilettes', 'un marron');
+(3, 'Enigme 1', '', '1er étage section orange là où tu ne peux pas te rendre à la place de quelqu’un d’autre', 'Calculatrice'),
+(4, 'Enigme 2', '', 'Rends-toi au rdc dans à l’entrée de la grotte des hommes en rouge', 'Moulin'),
+(5, 'Enigme 3', '', 'Rends-toi au RDC à la source du nectar de tout bon travailleur', 'APERO'),
+(6, 'Enigme 4', '', 'RDV devant le local arc-en-ciel', 'SANTE'),
+(7, 'Enigme 5', '', 'Direction le 7ème ciel (enfin le 2ème) à l\'entrée de la grande machine de fer', 'Aujourd\'hui');
 
 -- --------------------------------------------------------
 
@@ -49,7 +53,7 @@ CREATE TABLE `enigme_membre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `enigme_membre`
+-- Déchargement des données de la table `enigme_membre`
 --
 
 INSERT INTO `enigme_membre` (`id`, `id_user`, `id_enigme`, `Resolution`) VALUES
@@ -73,7 +77,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Index pour les tables exportées
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `pseudo`, `email`, `motdepasse`, `admin`) VALUES
+(1, 'solene', 'lll@hotmai', 'fr', 0);
+
+--
+-- Index pour les tables déchargées
 --
 
 --
@@ -95,14 +106,14 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
 -- AUTO_INCREMENT pour la table `ENIGME`
 --
 ALTER TABLE `ENIGME`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `enigme_membre`
 --
@@ -112,4 +123,4 @@ ALTER TABLE `enigme_membre`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
