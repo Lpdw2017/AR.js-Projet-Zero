@@ -27,7 +27,7 @@ require('inc/db.php');
                 <li><a href="connect.php">Mon Grimoire</a></li>
               <?php } ?>
               <?php if(isset($_SESSION['log']['admin'])){?>
-                              <li><a href="admin.php">Administration</a></li>
+                <li><a href="admin.php">Administration</a></li>
               <?php } ?>
               <li><a href="deconnexion.php">Déconnexion</a></li>
             </ul>

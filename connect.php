@@ -36,18 +36,14 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
               	<h1><?php echo $value['titre']; ?></h1>
 
 
-
-
                 <form action="" method="POST"><label for="">Répondre à la question</label>
-                    <? if($value['Resolution'] != 0){
+                    <? if($value['Resolution'] != 1){
                     ?>
                     <input type="repondre" name="repondre" class="form_input"/>
                     <button type="submit" class="btn btn-primary">repondre</button>
 
 
                     <?}else {?>
-
-
                     <p>vous avez déjà répondu à la question !</p>
                     <?}?>
 

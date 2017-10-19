@@ -40,14 +40,8 @@ if(empty($errors)){
                     'email' => $_POST['email']
                 )
             );
-            ?>
-            <p>
-              Vous voila inscrit !
-            </p>
-
-
-            <a href="index.php">maintenant, connectez vous !</a>
-            <?php
+            header('Location: http://www.example.com/');
+            exit;
 
             $req->closeCursor();
     }
