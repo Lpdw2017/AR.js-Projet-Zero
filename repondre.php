@@ -34,7 +34,9 @@ $sql="SELECT* FROM ENIGME";
                     <p>vous avez déjà répondu à la question !</p>
                     <?
                   }
+
                     ?>
+
                     <button id ="indice_lieu">Un indice sur le lieu? </button>
                     <div class="lieu"><? echo $value['lieu'];?></div>
                 </form>
@@ -57,6 +59,7 @@ $sql="SELECT* FROM ENIGME";
                                               )
                                           );
                                           ?>
+
                                           <p>
                                             Vous avez trouvé la bonne réponse ! Bravo !
                                           </p>
