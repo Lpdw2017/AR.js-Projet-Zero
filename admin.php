@@ -10,6 +10,8 @@ if(isset($_SESSION['log'])){
     ?>
     <div class="admin">
     	<?php
+
+
                   foreach($result as $key => $value){
                     ?> <div class="user"> <?php echo $value['pseudo'];?>
                       <?php echo ("<a class='delet' type='button' href='delete.php?id=".$value['id']."'> Supprimer l'utilisateur </a>");?>
@@ -22,7 +24,7 @@ if(isset($_SESSION['log'])){
   }
 } else {
   ?>
-  <h3>Vous n'avez rien à faire ici, retournez d'ou vous venez !<a href="index.php">fripouille  !</a> </h3>
+  <h3>Vous n'avez rien à faire ici, retournez d'ou vous venez !<a href="index.php">  fripouille  !</a> </h3>
   <?php
 }
 

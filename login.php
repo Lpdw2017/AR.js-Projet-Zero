@@ -33,7 +33,7 @@ else {
                        echo ($_SESSION['log']['pseudo'].", vous êtes connecté  ! vous pouvez dorénavant acceder a votre grimoire. <a href='connect.php'>Allons y !</a>");
               }
               else{
-                  echo '<div class="alert alert-danger" role="alert"> <p class="erreur2">Le mot de passe est incorrecte</p></div>';
+                  echo '<div class="alert alert-danger" role="alert"> <p class="erreur2">Le mot de passe est incorrect</p></div>';
               }
           }
           else{
