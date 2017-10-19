@@ -3,43 +3,32 @@ body {
   background-color: darkgrey;
   font-family: Karla,Apercu,sans-serif;
   font-weight: 400;
+    color: #FDFDFD;
 }
 
 h1{
   color:#AA9585;
   font-family: fantasy;
-  font-weight: 900;
+  font-size: 4em;
   transform: translateY(0px);
-}
-body{
-  color: #FDFDFD;
 }
 label{
   color: #FDFDFD;
   font-family: fantasy;
 }
+
 #indice_lieu{
   color: black;
-
 }
-
-
 .container{
 background-color: black;
-
 }
-
-.panneau_index{
-display: flex;
-flex-direction: column;
-position: absolute;
-width: 15%;
-margin: 3%;
-padding-top: 5%;
-}
+/* INDEX */
 .heading-content{
   display: flex;
   justify-content: center;
+  padding-bottom: 3%;
+  padding-top: 2%;
 }
 .bloc {
 padding-top: 10%;
@@ -55,38 +44,43 @@ text-align:center; /* on rÃ©tablit l'alignement du texte */
   font-weight:100;
   font-size:40px;
 }
+.fab-quest h3{
+  font-size: 3em;
+  padding: 4%;
+  border-bottom: 1px solid black;
+  transition-property: border-bottom;
+  transition-duration: 4s;
+}
+.fab-quest h3:hover{
+border-bottom: 2px solid red;
+}
+.index-txt{
+  text-align: center;
+}
+.index-txt p{
+  margin-top:4%;
+}
+.voyageur{
+  font-size: 2em;
+  margin-bottom: 8%;
+}
+.txt-deux{
+  padding-top: 6%;
+}
+.interrogation-point{
+  padding-top: 7%;
 
-
-/*For Footer Section*/
-.footer{
-
-	color:#FFFFFF;
-	padding: 7px 10px 0;
-	text-align: center;
-}
-.social a i{
-	color: #FFFFFF;
-    font-size: 18px;
-    background: #FFFFFF;
-    border-radius: 100%;
-    height:30px;
-    width: 30px;
-    text-align: center;
-    line-height: 30px;
-    margin: 10px;
-}
-.social a i:hover{
-	color:#FFFFFF;
-	background-color: #FFFFFF;
-}
-ul#menu_horizontal li {
-display : inline;
-padding : 0 0.5em;
-}
-ul#menu_horizontal {
-list-style-type : none;
 }
 
+/*connect */
+.panneau_index{
+display: flex;
+flex-direction: column;
+position: absolute;
+width: 15%;
+margin: 3%;
+padding-top: 5%;
+}
 /* Camera CSS*/
 
 #markerInfo {
@@ -120,4 +114,47 @@ list-style-type : none;
   vertical-align: middle;
   transform: rotateX(60deg);
   opacity: 0.5;
+}
+
+
+/*Footer CSS */
+
+.footer{
+	color:#FFFFFF;
+	padding: 2%;
+	text-align: center;
+}
+.social{
+  padding-top: 2%;
+  border-top: 1px solid;
+  margin-top: 2%;
+}
+.social a i{
+	color: black;
+    font-size: 18px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    height:30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: 10px;
+}
+.social a i:hover{
+	color:#FFFFFF;
+	background-color: #AA9585;
+}
+#img-fab {
+  height: 50px;
+}
+#img-fab:hover{
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+ul#menu_horizontal li {
+display : inline;
+padding : 0 0.5em;
+}
+ul#menu_horizontal {
+list-style-type : none;
 }
