@@ -1,5 +1,4 @@
 <?php
-require_once 'inc/functions.php';
 if(!empty($_POST)){
 
     $errors = array();
@@ -46,7 +45,7 @@ if(empty($errors)){
               Vous voila inscrit !
             </p>
 
-            
+
             <a href="index.php">maintenant, connectez vous !</a>
             <?php
 
