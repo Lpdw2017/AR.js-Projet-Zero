@@ -38,7 +38,7 @@ else {
           }
           else{
 
-              echo '<p class="erreur2">Ce pseudo n\'existe pas</p>';
+              echo '<p class="erreur2">Ce pseudo n\'existe pas, <a href="index.php">Connectez-vous!</a></p>';
 
           }
 
