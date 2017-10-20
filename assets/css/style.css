@@ -168,3 +168,9 @@ padding : 0 0.5em;
 ul#menu_horizontal {
 list-style-type : none;
 }
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: black;
+}
