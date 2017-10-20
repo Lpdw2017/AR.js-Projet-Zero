@@ -1,7 +1,7 @@
 httpd:
   build: $PWD
   links:
-   - maria_db:db
+   - mysql:db
   ports:
    - 80:80
   volumes:
@@ -10,22 +10,22 @@ httpd:
     DB_ENV_MYSQL_USER: root
     DB_ENV_MYSQL_PASSWORD: docker
     BUILD_STAGE: docker-compose
-maria_db:
-  container_name: mariadb
-  image: mariadb
+mysql:
+  container_name: mysql
+  image: mysql
   volumes:
-   - $PWD/sql/staging.sql:/docker-entrypoint-initdb.d/staging.sql
+   - $PWD/sql/arjs.sql:/docker-entrypoint-initdb.d/arjs.sql
   environment:
-    MYSQL_ROOT_PASSWORD: toto
-    MYSQL_DATABASE: sqli
+    MYSQL_ROOT_PASSWORD: lpdw2017
+    MYSQL_DATABASE: arjs_kwry
   expose:
    - "3306"
 phpmyadmin:
   image: phpmyadmin/phpmyadmin
   links:
-   - maria_db:db
+   - mysql:db
   ports:
    - 8181:80
   environment:
-    PMA_USER: root
-PMA_PASSWORD: toto
+    PMA_USER: arjs_kwry
+    PMA_PASSWORD: lpdw2017

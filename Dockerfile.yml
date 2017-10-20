@@ -3,5 +3,5 @@ FROM php:5-apache
 RUN apt-get update && apt-get install -y php5-mysql
 RUN docker-php-ext-install -j$(nproc) mysql
 RUN docker-php-ext-install pdo pdo_mysql
-RUN https://aframe.io/releases/0.5.0/aframe.min.js /tmp/aframe.js
-RUN https://github.com/jeromeetienne/AR.js.git /tmp/AR.js
+RUN https://github.com/jeromeetienne/AR.js/tmp/AR.js
+RUN https://github.com/mrdoob/three.js/tmp/three.js
