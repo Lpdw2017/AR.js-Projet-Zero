@@ -11,7 +11,7 @@ $sql="SELECT * FROM ENIGME INNER JOIN enigme_membre ON ENIGME.id = enigme_membre
                       }
                       ?>
 </div>
-<div="row">
+
 <div class="col-md-offset-2 col-md-8">
 <h2 class="text-center">Te voici connecté(e) à l’univers fantastique de </br>The Faclab Quest !</h2></br></br>
 
@@ -32,18 +32,18 @@ Pour toute réponse, un seul mot (sans accent ni ponctuation) sera accepté.</p>
 	<?php
               foreach($result as $key => $value){?>
               	<h1><?php echo $value['titre'];?></h1>
-                <form action="" method="POST"><label for="">Répondre à la question</label>
+                <label for="">Répondre à la question :  </label>  <?php echo ("<a class='camera' type='button' href='camera/camera".$value['id'].".php'><i class='fa fa-camera-retro' aria-hidden='true'></i></a>");?>
                     <? if($value['Resolution'] != 1){
                     ?>
-                    <input type="repondre" name="repondre" class="form_input"/>
-                    <button type="submit" class="btn btn-primary">repondre</button>
+                  <form action="" method="POST">  <input type="repondre" name="repondre" class="form_input"/>
+                    <button type="submit" class="btn btn-primary">repondre</button></form>
                     <?}else {?>
                     <p>vous avez déjà répondu à la question !</p>
                     <?}?>
-                    <?php echo ("<a class='camera' type='button' href='camera/camera".$value['id'].".php'><i class='fa fa-camera-retro' aria-hidden='true'></i></a>");?>  
-                    <button id ="indice_lieu">Un indice sur le lieu? </button>
-                    <div class="lieu"><? echo $value['lieu'];?></div>
-                </form>
+
+                  </br><button id ="indice_lieu">Un indice sur le lieu? </button>
+                  <div class="lieu"><? echo $value['lieu'];?></div>
+
 
                 <?php
                   if(!empty($_POST)){

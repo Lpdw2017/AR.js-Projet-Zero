@@ -1,8 +1,8 @@
 <?php
 $host ='localhost';
-$db_name ='arjs_kwry';
-$user ='arjs_kwry';
-$password ='lpdw2017';
+$db_name ='arjs';
+$user ='root';
+$password ='root';
 
 try {
 $db = new PDO("mysql:dbname=" .$db_name.";host=" .$host, $user, $password );

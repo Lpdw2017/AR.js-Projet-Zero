@@ -123,7 +123,10 @@ padding-top: 5%;
   opacity: 0.5;
 }
 
-
+.fa-camera-retro:before {
+    content: "\f083";
+    font-size: 40px;
+}
 /*Footer CSS */
 
 .footer{
